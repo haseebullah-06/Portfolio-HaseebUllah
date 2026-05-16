@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Haseeb Ullah — Developer Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-logo">H.</div>
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+</div>
+
+<!-- ORB BACKGROUNDS -->
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<!-- CUSTOM CURSOR -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- SCREENSHOT MODAL -->
+<div class="ss-modal" id="ss-modal" onclick="document.getElementById('ss-modal').classList.remove('open')">
+  <img id="ss-modal-img" src="" alt="Screenshot"/>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo" onclick="navigate('home',null);return false">HU.</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#" onclick="navigate('home',this);return false" data-page="home" class="active">Home</a></li>
+    <li><a href="#" onclick="navigate('about',this);return false" data-page="about">About</a></li>
+    <li><a href="#" onclick="navigate('experience',this);return false" data-page="experience">Experience</a></li>
+    <li><a href="#" onclick="navigate('education',this);return false" data-page="education">Education</a></li>
+    <li><a href="#" onclick="navigate('skills',this);return false" data-page="skills">Skills</a></li>
+    <li><a href="#" onclick="navigate('projects',this);return false" data-page="projects">Projects</a></li>
+    <li><a href="#" onclick="navigate('contact',this);return false" data-page="contact">Contact</a></li>
+  </ul>
+  <div class="nav-right" id="nav-right">
+    <a href="https://github.com/haseebullah-06" target="_blank" class="nav-social" title="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/haseebullah06/" target="_blank" class="nav-social" title="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </div>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#" onclick="navigate('home',null);closeMenu();return false">Home</a>
+  <a href="#" onclick="navigate('about',null);closeMenu();return false">About</a>
+  <a href="#" onclick="navigate('experience',null);closeMenu();return false">Experience</a>
+  <a href="#" onclick="navigate('education',null);closeMenu();return false">Education</a>
+  <a href="#" onclick="navigate('skills',null);closeMenu();return false">Skills</a>
+  <a href="#" onclick="navigate('projects',null);closeMenu();return false">Projects</a>
+  <a href="#" onclick="navigate('contact',null);closeMenu();return false">Contact</a>
+</div>
+
+<!-- ===== HOME PAGE ===== -->
+<div id="page-home" class="page active">
+  <div class="home-grid">
+    <div class="home-text">
+      <p class="greeting">Welcome to my Portfolio</p>
+      <h1>Hi, I'm <br><span style="background:linear-gradient(135deg,var(--accent),var(--accent2) 50%,var(--accent3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Haseeb Ullah</span></h1>
+      <p class="role-line"><span class="role-accent">Computer Science Student</span> at Bahria University</p>
+      <p class="subtitle">Passionate about programming, development, and building practical digital solutions through continuous learning and hands-on projects.</p>
+
+      <div class="hero-socials">
+        <a href="https://github.com/haseebullah-06" target="_blank" class="social-btn">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/haseebullah06/" target="_blank" class="social-btn">
+          <i class="fab fa-linkedin-in"></i> LinkedIn
+        </a>
+      </div>
+
+      <div class="home-actions">
+        <a href="#" class="btn btn-primary" onclick="navigate('projects',null);return false">
+          <i class="fas fa-code"></i> View Projects
+        </a>
+        <a href="#" class="btn btn-outline" onclick="navigate('contact',null);return false">
+          <i class="fas fa-envelope"></i> Contact Me
+        </a>
+        <a href="#" class="btn btn-download" onclick="alert('Resume download link coming soon!');return false">
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+      </div>
+
+      <div class="home-stats">
+        <div class="stat-item">
+          <div class="stat-number">2+</div>
+          <div class="stat-label">Projects Built</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Skills & Tools</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">1</div>
+          <div class="stat-label">Internship</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">∞</div>
+          <div class="stat-label">Still Learning</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-visual">
+      <div class="profile-wrap">
+        <div class="profile-glow"></div>
+        <div class="profile-glow-mask"></div>
+        <img src="profile.png" alt="Haseeb Ullah" class="profile-img"/>
+        <div class="float-badge badge-1">
+          <span class="badge-dot" style="background:var(--accent2)"></span>Bahria University
+        </div>
+        <div class="float-badge badge-2">
+          <span class="badge-dot" style="background:#4ade80"></span>Open to Opportunities
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ABOUT PAGE ===== -->
+<div id="page-about" class="page">
+  <div class="section-header" data-reveal>
+    <p class="section-tag">Who I Am</p>
+    <h2 class="section-title">About Me</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-text" data-reveal>
+      <p>🎓 <strong>BS, Computer Science Student</strong> | Bahria University, Karachi</p>
+      <p>I'm a Computer Science student passionate about technology, problem solving, and building practical solutions through code. I enjoy learning by doing and constantly push myself to improve my skills in programming, software development, and logical thinking.</p>
+      <p>I have a strong interest in development, tech communities, and exploring how real world systems and applications are built. Whether it's working on projects, learning new concepts, or understanding how things work behind the scenes, I'm always looking for opportunities to grow.</p>
+      <div class="about-highlight">
+        Currently focused on improving my skills in programming and development while building a strong foundation for a career in tech. Always learning, always evolving. 💻
+      </div>
+      <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap">
+        <a href="#" class="btn btn-primary" onclick="navigate('contact',null);return false">Let's Connect <i class="fas fa-arrow-right"></i></a>
+        <a href="https://github.com/haseebullah-06" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+    </div>
+    <div class="info-cards" data-reveal>
+      <div class="info-card">
+        <div class="info-icon">👤</div>
+        <div><div class="info-label">Full Name</div><div class="info-value">Haseeb Ullah</div></div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🎓</div>
+        <div><div class="info-label">Degree</div><div class="info-value">BS Computer Science — 1st Year</div></div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🏫</div>
+        <div><div class="info-label">University</div><div class="info-value">Bahria University, Karachi</div></div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">📍</div>
+        <div><div class="info-label">Location</div><div class="info-value">Karachi, Pakistan</div></div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">✉️</div>
+        <div><div class="info-label">Email</div><div class="info-value">haseebullah2206@gmail.com</div></div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">📱</div>
+        <div><div class="info-label">Phone</div><div class="info-value">0321-2762004</div></div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">💼</div>
+        <div><div class="info-label">Status</div><div class="info-value">Open to Opportunities</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== EXPERIENCE PAGE ===== -->
+<div id="page-experience" class="page">
+  <div class="section-header" data-reveal>
+    <p class="section-tag">Work Experience</p>
+    <h2 class="section-title">Experience</h2>
+  </div>
+  <div class="exp-card" data-reveal>
+    <div class="exp-header">
+      <img src="syntecxhub.jpg" alt="Syntecxhub" class="exp-logo"/>
+      <div class="exp-title-block">
+        <div class="exp-role">Frontend Developer Intern</div>
+        <div class="exp-company">Syntecxhub</div>
+        <div class="exp-meta">
+          <span><i class="far fa-calendar"></i> April 2026 – May 2026</span>
+          <span><i class="fas fa-map-marker-alt"></i> Remote</span>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:10px">
+          <span class="exp-badge intern"><i class="fas fa-graduation-cap"></i> Internship</span>
+          <span class="exp-badge remote"><i class="fas fa-wifi"></i> Remote</span>
+        </div>
+      </div>
+    </div>
+    <ul class="exp-list">
+      <li>Worked on 4 progressive remote tasks, each building on real-world frontend development skills</li>
+      <li>Improved proficiency in HTML, CSS, and JavaScript through structured task-based learning</li>
+      <li>Built responsive interfaces optimized for multiple screen sizes and devices</li>
+      <li>Enhanced problem solving skills through practical coding challenges and reviews</li>
+      <li>Learned practical real-world development workflow including version control and project structure</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== EDUCATION PAGE ===== -->
+<div id="page-education" class="page">
+  <div class="section-header" data-reveal>
+    <p class="section-tag">Academic Journey</p>
+    <h2 class="section-title">Education</h2>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-card">
+        <div class="timeline-period">2025 — Present <span class="badge-pill">Current</span></div>
+        <div class="timeline-school">Bahria University, Karachi</div>
+        <div class="timeline-degree">BS Computer Science</div>
+        <div class="timeline-desc">Currently enrolled in the BS Computer Science program. Studying core subjects including OOP, Data Structures, Programming Fundamentals in Java, and more. Building a strong foundation in software development and computational thinking.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-card">
+        <div class="timeline-period">2023 — 2025</div>
+        <div class="timeline-school">St. Patrick's College, Karachi</div>
+        <div class="timeline-degree">Intermediate — Pre-Engineering (Computer Science)</div>
+        <div class="timeline-desc">Completed intermediate studies with Computer Science as a major subject. Gained a solid understanding of programming concepts, computer fundamentals, and applied sciences.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-card">
+        <div class="timeline-period">2013 — 2023</div>
+        <div class="timeline-school">Saleem Nawaz Fazaia College Masroor</div>
+        <div class="timeline-degree">Primary &amp; Secondary Schooling (Matriculation)</div>
+        <div class="timeline-desc">Completed a decade of schooling here. This is where my early interest in computers and logic began — introduced to the C programming language as part of the curriculum, sparking a lifelong interest in coding and technology.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SKILLS PAGE ===== -->
+<div id="page-skills" class="page">
+  <div class="section-header" data-reveal>
+    <p class="section-tag">What I Know</p>
+    <h2 class="section-title">Skills &amp; Technologies</h2>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-card" data-delay="0">
+      <div class="skill-icon">🌐</div>
+      <div class="skill-name">HTML</div>
+      <div class="skill-desc">Solid grasp of semantic markup, forms, accessibility, and building structured web pages.</div>
+      <div class="skill-bar-bg"><div class="skill-bar-fill" data-level="82"></div></div>
+      <div class="skill-level">Intermediate · 82%</div>
+    </div>
+    <div class="skill-card" data-delay="80">
+      <div class="skill-icon">🎨</div>
+      <div class="skill-name">CSS</div>
+      <div class="skill-desc">Comfortable with styling, Flexbox, Grid, animations, responsive design, and glassmorphism effects.</div>
+      <div class="skill-bar-bg"><div class="skill-bar-fill" data-level="78"></div></div>
+      <div class="skill-level">Intermediate · 78%</div>
+    </div>
+    <div class="skill-card" data-delay="160">
+      <div class="skill-icon">⚡</div>
+      <div class="skill-name">JavaScript</div>
+      <div class="skill-desc">Fundamentals of JS including DOM manipulation, events, functions, and basic interactivity.</div>
+      <div class="skill-bar-bg"><div class="skill-bar-fill" data-level="55"></div></div>
+      <div class="skill-level">Learning · 55%</div>
+    </div>
+    <div class="skill-card" data-delay="240">
+      <div class="skill-icon">🔷</div>
+      <div class="skill-name">C++</div>
+      <div class="skill-desc">Strong foundation — classes, OOP patterns, file I/O, and problem solving. Used in major projects.</div>
+      <div class="skill-bar-bg"><div class="skill-bar-fill" data-level="74"></div></div>
+      <div class="skill-level">Intermediate · 74%</div>
+    </div>
+    <div class="skill-card" data-delay="320">
+      <div class="skill-icon">☕</div>
+      <div class="skill-name">Java</div>
+      <div class="skill-desc">Currently studying Java as part of university curriculum — OOP principles, classes, and inheritance.</div>
+      <div class="skill-bar-bg"><div class="skill-bar-fill" data-level="45"></div></div>
+      <div class="skill-level">Learning · 45%</div>
+    </div>
+    <div class="skill-card" data-delay="400">
+      <div class="skill-icon">🧩</div>
+      <div class="skill-name">Object-Oriented Programming</div>
+      <div class="skill-desc">Advanced OOP in Java — encapsulation, inheritance, polymorphism, abstraction, and design patterns.</div>
+      <div class="skill-bar-bg"><div class="skill-bar-fill" data-level="60"></div></div>
+      <div class="skill-level">Intermediate · 60%</div>
+    </div>
+    <div class="skill-card" data-delay="480">
+      <div class="skill-icon">📱</div>
+      <div class="skill-name">Responsive Design</div>
+      <div class="skill-desc">Media queries, mobile-first layouts, fluid grids, and adaptive typography for all devices.</div>
+      <div class="skill-bar-bg"><div class="skill-bar-fill" data-level="76"></div></div>
+      <div class="skill-level">Intermediate · 76%</div>
+    </div>
+    <div class="skill-card" data-delay="560">
+      <div class="skill-icon">🖥️</div>
+      <div class="skill-name">Frontend Development</div>
+      <div class="skill-desc">Building complete web pages and interfaces combining HTML, CSS, and JavaScript effectively.</div>
+      <div class="skill-bar-bg"><div class="skill-bar-fill" data-level="70"></div></div>
+      <div class="skill-level">Intermediate · 70%</div>
+    </div>
+    <div class="skill-card" data-delay="640">
+      <div class="skill-icon">🧠</div>
+      <div class="skill-name">Problem Solving</div>
+      <div class="skill-desc">Breaking down complex problems into logical steps, algorithmic thinking, and debugging skills.</div>
+      <div class="skill-bar-bg"><div class="skill-bar-fill" data-level="72"></div></div>
+      <div class="skill-level">Intermediate · 72%</div>
+    </div>
+    <div class="skill-card" data-delay="720">
+      <div class="skill-icon">🔧</div>
+      <div class="skill-name">Git &amp; GitHub</div>
+      <div class="skill-desc">Version control fundamentals — commits, branches, push/pull, and managing repositories on GitHub.</div>
+      <div class="skill-bar-bg"><div class="skill-bar-fill" data-level="58"></div></div>
+      <div class="skill-level">Learning · 58%</div>
+    </div>
+  </div>
+  <div class="learning-section" data-reveal>
+    <div class="learning-title"><span class="pulse"></span>Currently Learning</div>
+    <div class="tags-wrap">
+      <span class="tag learning">Java ☕</span>
+      <span class="tag learning">Advanced OOP</span>
+      <span class="tag learning">Data Structures</span>
+      <span class="tag learning">Algorithms</span>
+    </div>
+    <br>
+    <div class="learning-title">Tools &amp; Others</div>
+    <div class="tags-wrap">
+      <span class="tag">Git &amp; GitHub</span>
+      <span class="tag">VS Code</span>
+      <span class="tag">Terminal / CLI</span>
+      <span class="tag">Logic Building</span>
+      <span class="tag">Web Development</span>
+      <span class="tag">Problem Solving</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PROJECTS PAGE ===== -->
+<div id="page-projects" class="page">
+  <div class="section-header" data-reveal>
+    <p class="section-tag">My Work</p>
+    <h2 class="section-title">Projects</h2>
+  </div>
+
+  <div class="projects-grid">
+
+    <!-- PROJECT 1: LUXR Shoe Website -->
+    <div class="project-card" data-reveal>
+      <div class="project-inner">
+        <div class="project-info">
+          <div class="project-num">Project 01</div>
+          <div class="project-title">LUXR — Shoe E-Commerce Website</div>
+          <div class="project-tech-line">Built with HTML &amp; CSS · Multi-Page Website</div>
+          <div class="project-desc">
+            A modern, premium shoe e-commerce frontend website featuring a sleek landing page, product collection grid, about page, and multiple UI pages. Designed with a clean minimal aesthetic and fully responsive layout.
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">HTML</span>
+            <span class="project-tag">CSS</span>
+            <span class="project-tag">Responsive Design</span>
+            <span class="project-tag">E-Commerce UI</span>
+            <span class="project-tag">Frontend</span>
+          </div>
+          <div style="margin-bottom:16px">
+            <p style="font-size:0.82rem;color:var(--muted);margin-bottom:10px;font-weight:500">Pages Included:</p>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px">
+              <li style="font-size:0.82rem;color:var(--muted);display:flex;gap:8px"><span style="color:var(--accent2)">▸</span>Landing Page with Hero &amp; Product Cards</li>
+              <li style="font-size:0.82rem;color:var(--muted);display:flex;gap:8px"><span style="color:var(--accent2)">▸</span>Collection Page with Responsive Product Grid</li>
+              <li style="font-size:0.82rem;color:var(--muted);display:flex;gap:8px"><span style="color:var(--accent2)">▸</span>About, Contact, Login &amp; Signup Pages</li>
+              <li style="font-size:0.82rem;color:var(--muted);display:flex;gap:8px"><span style="color:var(--accent2)">▸</span>Modern Navigation &amp; Consistent Branding</li>
+            </ul>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/haseebullah-06/LUXR-Shoe-E-Commerce-Website" target="_blank" class="proj-btn proj-btn-primary"><i class="fab fa-github"></i> View Code</a>
+            <a href="#" class="proj-btn proj-btn-outline" onclick="alert('Live demo link coming soon!');return false"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          </div>
+        </div>
+        <div class="project-screenshots">
+          <div class="screenshots-stack">
+            <img src="luxr-landing.png" alt="LUXR Landing Page" class="ss-img" onclick="openModal(this.src)"/>
+            <img src="luxr-collection.png" alt="LUXR Collection" class="ss-img" onclick="openModal(this.src)"/>
+            <img src="luxr-about.png" alt="LUXR About" class="ss-img" style="grid-column:1/-1" onclick="openModal(this.src)"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 2: C++ Inventory System -->
+    <div class="project-card" data-reveal>
+      <div class="project-inner reverse">
+        <div class="project-info">
+          <div class="project-num">Project 02</div>
+          <div class="project-title">Shop Inventory &amp; Billing System</div>
+          <div class="project-tech-line">Built with C++ · File I/O · Console Application</div>
+          <div class="project-desc">
+            A fully functional console-based shop management system built in C++. Features complete product lifecycle management, real-time stock validation, automated billing, and sales reporting — all persisted using file handling.
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">C++</span>
+            <span class="project-tag">File I/O</span>
+            <span class="project-tag">OOP</span>
+            <span class="project-tag">Data Management</span>
+            <span class="project-tag">Billing System</span>
+          </div>
+          <div style="margin-bottom:16px">
+            <p style="font-size:0.82rem;color:var(--muted);margin-bottom:10px;font-weight:500">Key Features:</p>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px">
+              <li style="font-size:0.82rem;color:var(--muted);display:flex;gap:8px"><span style="color:var(--accent2)">▸</span>Product Management (Add/Update/Delete/View)</li>
+              <li style="font-size:0.82rem;color:var(--muted);display:flex;gap:8px"><span style="color:var(--accent2)">▸</span>Stock Validation &amp; Low Stock Alerts</li>
+              <li style="font-size:0.82rem;color:var(--muted);display:flex;gap:8px"><span style="color:var(--accent2)">▸</span>Order Management &amp; Billing System</li>
+              <li style="font-size:0.82rem;color:var(--muted);display:flex;gap:8px"><span style="color:var(--accent2)">▸</span>Sales Reports &amp; File-based Storage</li>
+            </ul>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/haseebullah-06/Shop-Inventory-Billing-System" target="_blank" class="proj-btn proj-btn-primary"><i class="fab fa-github"></i> View Code</a>
+          </div>
+        </div>
+        <div class="project-screenshots">
+          <div class="screenshots-stack">
+            <img src="cpp-menu.png" alt="Inventory Main Menu" class="ss-img" onclick="openModal(this.src)"/>
+            <img src="cpp-product-menu.png" alt="Product Menu" class="ss-img" onclick="openModal(this.src)"/>
+            <img src="cpp-add-product.png" alt="Add Product" class="ss-img" style="grid-column:1/-1" onclick="openModal(this.src)"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== CONTACT PAGE ===== -->
+<div id="page-contact" class="page">
+  <div class="section-header" data-reveal>
+    <p class="section-tag">Reach Out</p>
+    <h2 class="section-title">Get In Touch</h2>
+  </div>
+  <div class="contact-grid">
+    <div data-reveal>
+      <p class="contact-lead">Whether you have a project idea, a collaboration opportunity, or just want to say hello — I'm always open to connecting!</p>
+      <a href="mailto:haseebullah2206@gmail.com" class="contact-item">
+        <div class="contact-item-icon">✉️</div>
+        <div><div class="contact-item-label">Email</div><div class="contact-item-val">haseebullah2206@gmail.com</div></div>
+      </a>
+      <a href="tel:03212762004" class="contact-item">
+        <div class="contact-item-icon">📱</div>
+        <div><div class="contact-item-label">Phone</div><div class="contact-item-val">0321-2762004</div></div>
+      </a>
+      <div class="contact-item" style="cursor:default">
+        <div class="contact-item-icon">📍</div>
+        <div><div class="contact-item-label">Location</div><div class="contact-item-val">Karachi, Pakistan</div></div>
+      </div>
+      <a href="https://github.com/haseebullah-06" target="_blank" class="contact-item">
+        <div class="contact-item-icon"><i class="fab fa-github" style="font-size:1.1rem"></i></div>
+        <div><div class="contact-item-label">GitHub</div><div class="contact-item-val">github.com/haseebullah-06</div></div>
+      </a>
+      <a href="https://www.linkedin.com/in/haseebullah06/" target="_blank" class="contact-item">
+        <div class="contact-item-icon"><i class="fab fa-linkedin-in" style="font-size:1.1rem"></i></div>
+        <div><div class="contact-item-label">LinkedIn</div><div class="contact-item-val">linkedin.com/in/haseebullah06</div></div>
+      </a>
+    </div>
+    <div data-reveal>
+      <form class="contact-form" id="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label class="form-label">Your Name</label>
+          <input type="text" class="form-input" placeholder="John Doe" required/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="john@example.com" required/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Subject</label>
+          <input type="text" class="form-input" placeholder="What's this about?" required/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-textarea" placeholder="Your message here..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">Send Message ✉️</button>
+        <div class="form-success" id="form-success">✅ Message sent! I'll get back to you soon.</div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 <a href="#">Haseeb Ullah</a> &nbsp;·&nbsp; Built from scratch with passion &amp; curiosity 🚀 &nbsp;·&nbsp; Karachi, Pakistan</p>
+  <div style="display:flex;gap:14px;justify-content:center;margin-top:12px">
+    <a href="https://github.com/haseebullah-06" target="_blank" style="color:var(--muted);font-size:1.1rem;transition:color 0.3s" onmouseover="this.style.color='var(--accent2)'" onmouseout="this.style.color='var(--muted)'"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/haseebullah06/" target="_blank" style="color:var(--muted);font-size:1.1rem;transition:color 0.3s" onmouseover="this.style.color='var(--accent2)'" onmouseout="this.style.color='var(--muted)'"><i class="fab fa-linkedin-in"></i></a>
+    <a href="mailto:haseebullah2206@gmail.com" style="color:var(--muted);font-size:1.1rem;transition:color 0.3s" onmouseover="this.style.color='var(--accent2)'" onmouseout="this.style.color='var(--muted)'"><i class="fas fa-envelope"></i></a>
+  </div>
+</footer>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
