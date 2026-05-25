@@ -102,7 +102,7 @@
 
       <div class="home-stats">
         <div class="stat-item">
-          <div class="stat-number">2+</div>
+          <div class="stat-number">3+</div>
           <div class="stat-label">Projects Built</div>
         </div>
         <div class="stat-item">
@@ -358,11 +358,51 @@
 
   <div class="projects-grid">
 
-    <!-- PROJECT 1: LUXR Shoe Website -->
+    <!-- PROJECT 1: Splitify -->
     <div class="project-card" data-reveal>
       <div class="project-inner">
         <div class="project-info">
           <div class="project-num">Project 01</div>
+          <div class="project-title">Splitify — Restaurant Bill Splitter</div>
+          <div class="project-tech-line">Built with Java · Java Swing · OOP · File Handling</div>
+          <div class="project-desc">
+            A full-featured desktop application for splitting restaurant bills among friends. Built as a semester project for the Object Oriented Programming course at Bahria University Karachi. Features user authentication, per-user session history, tax & tip calculator, and a modern dark-themed GUI built entirely with Java Swing.
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Java</span>
+            <span class="project-tag">Java Swing</span>
+            <span class="project-tag">OOP</span>
+            <span class="project-tag">File Handling</span>
+            <span class="project-tag">Desktop App</span>
+          </div>
+          <div style="margin-bottom:16px">
+            <p style="font-size:0.82rem;color:var(--muted);margin-bottom:10px;font-weight:500">Split Modes:</p>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px">
+              <li style="font-size:0.82rem;color:var(--muted);display:flex;gap:8px"><span style="color:var(--accent2)">▸</span>🇺🇸 American — divide equally among all</li>
+              <li style="font-size:0.82rem;color:var(--muted);display:flex;gap:8px"><span style="color:var(--accent2)">▸</span>🇳🇱 Dutch — everyone pays for their own items</li>
+              <li style="font-size:0.82rem;color:var(--muted);display:flex;gap:8px"><span style="color:var(--accent2)">▸</span>🇵🇰 Pakistani — custom contributions per person</li>
+              <li style="font-size:0.82rem;color:var(--muted);display:flex;gap:8px"><span style="color:var(--accent2)">▸</span>Session stats — biggest spender, category breakdowns</li>
+            </ul>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/haseebullah-06/Splitify" target="_blank" class="proj-btn proj-btn-primary"><i class="fab fa-github"></i> View Code</a>
+          </div>
+        </div>
+        <div class="project-screenshots">
+          <div class="screenshots-stack">
+            <img src="splitify-bill.png" alt="Splitify Bill Manager" class="ss-img" onclick="openModal(this.src)"/>
+            <img src="splitify-receipt.png" alt="Splitify Receipt" class="ss-img" onclick="openModal(this.src)"/>
+            <img src="splitify-login.png" alt="Splitify Login" class="ss-img" style="grid-column:1/-1" onclick="openModal(this.src)"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 2: LUXR Shoe Website -->
+    <div class="project-card" data-reveal>
+      <div class="project-inner reverse">
+        <div class="project-info">
+          <div class="project-num">Project 02</div>
           <div class="project-title">LUXR — Shoe E-Commerce Website</div>
           <div class="project-tech-line">Built with HTML &amp; CSS · Multi-Page Website</div>
           <div class="project-desc">
@@ -391,19 +431,19 @@
         </div>
         <div class="project-screenshots">
           <div class="screenshots-stack">
-            <img src="luxr-landing.png" alt="LUXR Landing Page" class="ss-img" onclick="openModal(this.src)"/>
             <img src="luxr-collection.png" alt="LUXR Collection" class="ss-img" onclick="openModal(this.src)"/>
-            <img src="luxr-about.png" alt="LUXR About" class="ss-img" style="grid-column:1/-1" onclick="openModal(this.src)"/>
+            <img src="luxr-about.png" alt="LUXR About" class="ss-img" onclick="openModal(this.src)"/>
+            <img src="luxr-landing.png" alt="LUXR Landing Page" class="ss-img" style="grid-column:1/-1" onclick="openModal(this.src)"/>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- PROJECT 2: C++ Inventory System -->
+    <!-- PROJECT 3: C++ Inventory System -->
     <div class="project-card" data-reveal>
-      <div class="project-inner reverse">
+      <div class="project-inner">
         <div class="project-info">
-          <div class="project-num">Project 02</div>
+          <div class="project-num">Project 03</div>
           <div class="project-title">Shop Inventory &amp; Billing System</div>
           <div class="project-tech-line">Built with C++ · File I/O · Console Application</div>
           <div class="project-desc">
@@ -431,9 +471,9 @@
         </div>
         <div class="project-screenshots">
           <div class="screenshots-stack">
-            <img src="cpp-menu.png" alt="Inventory Main Menu" class="ss-img" onclick="openModal(this.src)"/>
             <img src="cpp-product-menu.png" alt="Product Menu" class="ss-img" onclick="openModal(this.src)"/>
-            <img src="cpp-add-product.png" alt="Add Product" class="ss-img" style="grid-column:1/-1" onclick="openModal(this.src)"/>
+            <img src="cpp-add-product.png" alt="Add Product" class="ss-img" onclick="openModal(this.src)"/>
+            <img src="cpp-menu.png" alt="Inventory Main Menu" class="ss-img" style="grid-column:1/-1" onclick="openModal(this.src)"/>
           </div>
         </div>
       </div>
@@ -494,7 +534,7 @@
 </div>
 
 <footer>
-  <p>© 2026 <a href="#">Haseeb Ullah</a> &nbsp;·&nbsp; Built from scratch with passion &amp; curiosity 🚀 &nbsp;·&nbsp; Karachi, Pakistan</p>
+  <p>© 2026 <a href="#">Haseeb Ullah</a> &nbsp;·&nbsp; "The mind that questions everything builds something worth remembering." &nbsp;·&nbsp; Karachi, Pakistan</p>
   <div style="display:flex;gap:14px;justify-content:center;margin-top:12px">
     <a href="https://github.com/haseebullah-06" target="_blank" style="color:var(--muted);font-size:1.1rem;transition:color 0.3s" onmouseover="this.style.color='var(--accent2)'" onmouseout="this.style.color='var(--muted)'"><i class="fab fa-github"></i></a>
     <a href="https://www.linkedin.com/in/haseebullah06/" target="_blank" style="color:var(--muted);font-size:1.1rem;transition:color 0.3s" onmouseover="this.style.color='var(--accent2)'" onmouseout="this.style.color='var(--muted)'"><i class="fab fa-linkedin-in"></i></a>
