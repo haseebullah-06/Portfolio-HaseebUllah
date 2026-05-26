@@ -1,4 +1,3 @@
-
 // ── LOADER ──
 window.addEventListener('load', () => {
   setTimeout(() => document.getElementById('loader').classList.add('hidden'), 2000);
@@ -103,11 +102,17 @@ function handleSubmit(e){
   e.preventDefault();
   const btn=e.target.querySelector('button[type=submit]');
   btn.textContent='Sending...';btn.disabled=true;
-  setTimeout(()=>{
-    document.getElementById('form-success').style.display='block';
-    btn.style.display='none';
-    e.target.reset();
-  },1400);
+  emailjs.sendForm('service_7jm518p','template_0ya9uop',e.target)
+    .then(()=>{
+      document.getElementById('form-success').style.display='block';
+      btn.style.display='none';
+      e.target.reset();
+    })
+    .catch(()=>{
+      btn.textContent='Send Message ✉️';
+      btn.disabled=false;
+      alert('Something went wrong. Please try again or email me directly at haseebullah2206@gmail.com');
+    });
 }
 
 // ── SCREENSHOT MODAL ──
